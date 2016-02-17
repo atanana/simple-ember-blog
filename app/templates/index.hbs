@@ -1,1 +1,7 @@
-{{outlet}}
+{{#each model.posts as |post|}}
+    {{post-short post=post}}
+{{else}}
+    <div class="jumbotron">
+        <h1>No posts yet</h1>
+    </div>
+{{/each}}
