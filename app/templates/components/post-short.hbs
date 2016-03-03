@@ -1,4 +1,7 @@
 <div class="panel panel-default">
-    <div class="panel-heading">{{post.title}}</div>
+    <div class="panel-heading">
+        {{post.title}}
+        {{fa-icon 'times-circle' class="pull-right text-danger" title="Delete post" click=(action "deletePost")}}
+    </div>
     <div class="panel-body">{{post.text}}</div>
 </div>
