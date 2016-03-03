@@ -13,5 +13,9 @@ export default Ember.Route.extend({
 
       this.controller.set('model', this.store.createRecord('post'));
     }
+  },
+
+  deactivate() {
+    this.controller.get('model').rollbackAttributes();
   }
 });
