@@ -1,16 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.createRecord('post');
+  model(params) {
+    console.log(params);
+    return this.store.find('post', params['post_id']);
   },
 
   actions: {
     savePost(post) {
-      post.set('created', new Date());
       post.save();
-
-      this.controller.set('model', this.store.createRecord('post'));
+      this.transitionTo('index');
     }
   },
 
