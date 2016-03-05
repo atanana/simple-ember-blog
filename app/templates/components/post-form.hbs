@@ -17,6 +17,14 @@
         </div>
 
         <div class="form-group">
+            <label class="col-md-4 control-label">Preview</label>
+            <br>
+            <div class="col-md-6">
+                {{markdown-to-html markdown=post.text}}
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-4 col-md-6">
                 {{bs-button type="primary" defaultText="Save" loadingText="Saving..." size="lg" disabled=post.isInvalid
                 action='save' }}

@@ -6,5 +6,7 @@
             {{fa-icon 'pencil-square' class="pull-right text-primary" title="Edit post"}}
         {{/link-to}}
     </div>
-    <div class="panel-body">{{post.text}}</div>
+    <div class="panel-body">
+        {{markdown-to-html markdown=post.text}}
+    </div>
 </div>
