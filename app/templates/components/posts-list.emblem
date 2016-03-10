@@ -1,0 +1,6 @@
+each sortedPosts as |post|
+  post-short post=post
+else
+  .jumbotron
+    h1
+      | No posts yet
