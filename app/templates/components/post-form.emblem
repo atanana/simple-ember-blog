@@ -1,0 +1,22 @@
+form.form-horizontal
+  fieldset
+    legend.col-md-7.col-md-offset-3
+      | Write a post
+    .form-group
+      label.col-md-4.control-label for="title-input"
+        | Title
+      .col-md-6
+        bs-input value=post.title id='title-input'
+    .form-group
+      label.col-md-4.control-label for="text-input"
+        | Text
+      .col-md-6
+        bs-textarea value=post.text id='text-input'
+    .form-group
+      label.col-md-4.control-label
+        | Preview
+      .col-md-6
+        markdown-to-html markdown=post.text
+    .form-group
+      .col-md-offset-4.col-md-6
+        bs-button type="primary" defaultText="Save" loadingText="Saving..." size="lg" disabled=post.isInvalid action='save'

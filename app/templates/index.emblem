@@ -1,0 +1,9 @@
+.container-fluid
+  .row
+    .col-md-6.col-md-offset-3
+      each model.posts as |post|
+        post-short post=post
+      else
+        .jumbotron
+          h1
+            | No posts yet

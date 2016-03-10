@@ -1,0 +1,11 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      link-to class="navbar-brand" "index"
+        | Just blog
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        active-link tagName="li"
+          link-to "index" | Posts
+        active-link tagName="li"
+          link-to "add-post" | Add new

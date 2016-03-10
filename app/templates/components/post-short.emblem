@@ -1,0 +1,8 @@
+.panel.panel-default
+  .panel-heading
+    = post.title
+    fa-icon 'times-circle' class="pull-right text-danger" title="Delete post" click=(action "deletePost")
+    link-to "edit-post" post.id
+      fa-icon 'pencil-square' class="pull-right text-primary" title="Edit post"
+  .panel-body
+    markdown-to-html markdown=post.text
