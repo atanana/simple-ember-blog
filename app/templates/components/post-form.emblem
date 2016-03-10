@@ -6,12 +6,12 @@ form.form-horizontal
       label.col-md-4.control-label for="title-input"
         | Title
       .col-md-6
-        bs-input value=post.title id='title-input'
+        bs-input#title-input value=post.title
     .form-group
       label.col-md-4.control-label for="text-input"
         | Text
       .col-md-6
-        bs-textarea value=post.text id='text-input'
+        bs-textarea#text-input value=post.text
     .form-group
       label.col-md-4.control-label
         | Preview

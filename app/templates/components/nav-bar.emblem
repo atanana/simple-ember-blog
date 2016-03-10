@@ -5,7 +5,7 @@ nav.navbar.navbar-default
         | Just blog
     .collapse.navbar-collapse
       ul.nav.navbar-nav
-        active-link tagName="li"
+        active-link%li
           link-to "index" | Posts
-        active-link tagName="li"
+        active-link%li
           link-to "add-post" | Add new
