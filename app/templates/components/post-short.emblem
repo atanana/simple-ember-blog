@@ -5,4 +5,4 @@
     link-to "edit-post" post.id
       fa-icon 'pencil-square' class="pull-right text-primary" title="Edit post"
   .panel-body
-    markdown-to-html markdown=post.text
+    markdown-to-html markdown=post.shortText
