@@ -12,6 +12,8 @@ form.form-horizontal
         | Text
       .col-md-6
         bs-textarea#text-input value=post.text
+        a href='https://daringfireball.net/projects/markdown/syntax' target='_blank' Markdown
+        |  supported
     .form-group
       label.col-md-4.control-label
         | Preview
