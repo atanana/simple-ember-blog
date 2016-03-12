@@ -13,10 +13,14 @@ export default DS.Model.extend({
     const text = this.get('text');
     let separator = 500;
 
-    if (text.charAt(separator - 1) !== ' ') {
-      separator = text.indexOf(' ', separator);
-    }
+    if (text.length > separator) {
+      if (text.charAt(separator - 1) !== ' ') {
+        separator = text.indexOf(' ', separator);
+      }
 
-    return text.substr(0, separator).trim() + ' ...';
+      return text.substr(0, separator).trim() + ' ...';
+    } else {
+      return text;
+    }
   })
 });
