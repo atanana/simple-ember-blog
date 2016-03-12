@@ -11,7 +11,7 @@ form.form-horizontal
       label.col-md-4.control-label for="text-input"
         | Text
       .col-md-6
-        bs-textarea#text-input value=post.text
+        bs-textarea#text-input value=post.text rows=25
         a href='https://daringfireball.net/projects/markdown/syntax' target='_blank' Markdown
         |  supported
     .form-group

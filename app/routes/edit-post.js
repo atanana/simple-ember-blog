@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   actions: {
     savePost(post) {
       post.save();
-      this.transitionTo('index');
+      history.back();
     }
   },
 

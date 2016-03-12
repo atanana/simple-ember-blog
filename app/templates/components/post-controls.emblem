@@ -1,0 +1,3 @@
+link-to "edit-post" post.id
+  fa-icon 'pencil-square' class="text-primary" title="Edit post"
+fa-icon 'times-circle' class="text-danger" title="Delete post" click=(action "deletePost")

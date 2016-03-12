@@ -4,5 +4,6 @@
       .page-header
         h1
           = model.title
+          post-controls post=model class='pull-right'
       .post-text
         markdown-to-html markdown=model.text
