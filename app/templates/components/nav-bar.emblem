@@ -9,3 +9,9 @@ nav.navbar.navbar-default
           link-to "index" | Posts
         active-link%li
           link-to "add-post" | Add new
+      ul.nav.navbar-nav.navbar-right
+        li
+          if session.isAuthenticated
+            a click='invalidateSession' href='#' Logout
+          else
+            link-to 'login' | Login
