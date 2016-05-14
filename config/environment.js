@@ -4,9 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'custom-blog',
     environment: environment,
-    contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
-    firebase: 'https://ember-blog2-tmp.firebaseio.com/',
-    torii: { sessionServiceName: 'session' },
+    contentSecurityPolicy: { 'connect-src': "'self'" },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

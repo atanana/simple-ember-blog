@@ -5,11 +5,17 @@ export default Ember.Route.extend({
 
   actions: {
     authenticate() {
-      let { login, password } = this.getProperties('login', 'password');
-      this.get('session').authenticate('authenticator:oauth2', login, password)
-        .catch((reason) => {
-          this.set('errorMessage', reason.error || reason);
-        });
+      let {login, password} = this.controller.getProperties('login', 'password');
+      this.get('session').authenticate('authenticator:blog', {
+        login: login,
+        password: password
+      }).catch((reason) => {
+        this.controller.set('errorMessage', reason.error || reason);
+      });
     }
+  },
+
+  deactivate() {
+    this.controller.set('errorMessage', '');
   }
 });
