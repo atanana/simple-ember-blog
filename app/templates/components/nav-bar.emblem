@@ -10,8 +10,9 @@ nav.navbar.navbar-default
         active-link%li
           link-to "add-post" | Add new
       ul.nav.navbar-nav.navbar-right
-        li
-          if session.isAuthenticated
+        if session.isAuthenticated
+          li
             a click='invalidateSession' href='#' Logout
-          else
+        else
+          active-link%li
             link-to 'login' | Login

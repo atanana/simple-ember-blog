@@ -1,16 +1,1 @@
-form.form-horizontal submit='authenticate'
-  fieldset
-    if errorMessage
-      .alert.alert-danger.col-md-6.col-md-offset-4
-        = errorMessage
-    .form-group
-      label.col-md-4.control-label for='login' Login
-      .col-md-6
-        bs-input#login value=login placeholder='Enter login'
-    .form-group
-      label.col-md-4.control-label for='password' Password
-      .col-md-6
-        bs-input#password value=password placeholder='Enter password' type='password'
-    .form-group
-      .col-md-offset-4.col-md-6
-        bs-button type="primary" buttonType='submit' text="Login" size="lg"
+login-form doLogin='authenticate' errorMessage=errorMessage
